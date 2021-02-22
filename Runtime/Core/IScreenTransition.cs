@@ -3,14 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IScreenTransition
+namespace Erethan.SceneLoadingSystem
 {
-    bool Faded { get; }
+    public interface IScreenTransition
+    {
+        bool Faded { get; }
 
-    event Action FadeInComplete;
-    event Action FadeOutComplete;
+        event Action FadeInComplete;
+        event Action FadeOutComplete;
 
 
-    void FadeIn();
-    void FadeOut();
+        void FadeIn();
+        void FadeOut();
+    }
 }
