@@ -6,39 +6,40 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
 
 
-
-[CreateAssetMenu(fileName = "Scene Loading", menuName = "Pulse/Scene Management/Scene Loading System")]
-public class SceneLoadingSystem : ScriptableObject
+namespace Erethan.SceneLoadingSystem
 {
-    [SerializeField] private AssetReference _loadingScene;
-    [SerializeField] private AssetReference _transitionPrefab;
-
-    private LoadControllerBehaviour _controllerBehaviour;
-    private LoadControllerBehaviour ControllerBehaviour
+    [CreateAssetMenu(fileName = "Scene Loading", menuName = "Erethan/Scene Management/Scene Loading System")]
+    public class SceneLoadingSystem : ScriptableObject
     {
-        get
+        [SerializeField] private AssetReference _loadingScene;
+        [SerializeField] private AssetReference _transitionPrefab;
+
+        private LoadControllerBehaviour _controllerBehaviour;
+        private LoadControllerBehaviour ControllerBehaviour
         {
-            if(_controllerBehaviour == null)
+            get
             {
-                _controllerBehaviour = LoadControllerBehaviour.InstantiateNew(this, _transitionPrefab);
+                if (_controllerBehaviour == null)
+                {
+                    _controllerBehaviour = LoadControllerBehaviour.InstantiateNew(this, _transitionPrefab);
+                }
+                return _controllerBehaviour;
             }
-            return _controllerBehaviour;
+            set
+            {
+                _controllerBehaviour = value;
+            }
         }
-        set
+
+        public float Progress => ControllerBehaviour.Progress;
+        public void LoadScene(AssetReference scene) => ControllerBehaviour.LoadScene(scene);
+
+        public AssetReference LoadingScene => _loadingScene;
+
+        public void Initialize()
         {
-            _controllerBehaviour = value;
+            _ = ControllerBehaviour;
         }
-    }
-
-    public float Progress => ControllerBehaviour.Progress;
-    public void LoadScene(AssetReference scene) => ControllerBehaviour.LoadScene(scene);
-
-    public AssetReference LoadingScene => _loadingScene;
-
-    public void Initialize()
-    {
-        _ = ControllerBehaviour;
-    }
 
 
 #if UNITY_EDITOR
@@ -63,4 +64,5 @@ public class SceneLoadingSystem : ScriptableObject
         _controllerBehaviour = null;
     }
 #endif
-}
+    }
+`}
