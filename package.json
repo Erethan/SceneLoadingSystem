@@ -1,7 +1,7 @@
 {
-  "name": "com.erethan.sceneloadingsystem",
-  "version": "1.0.0",
-  "displayName": "SceneLoadingSystem",
+  "name": "com.erethan.sceneloadingservice",
+  "version": "1.0.2",
+  "displayName": "Scene Loading System",
   "description": "Controls scene loading using Addressables asynchronously with no need to instantiate setup managers",
   "unity": "2019.4",
   "dependencies": {
@@ -13,5 +13,10 @@
 	      "description": "Provides a baisc transition prefab.",
 	      "path": "Samples/Overlay Transition"
 	    }
-	]
+	],
+   "author": {
+    "name": "Erethan",
+    "email": "ericmsbr@hotmail.com",
+    "url": "https://github.com/Erethan"
+  }
 }
