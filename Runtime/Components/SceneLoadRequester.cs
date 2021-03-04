@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.ResourceProviders;
+using Erethan.ScriptableSystems.SceneLoad;
 
-namespace Erethan.SceneLoadingSystem.Components
+namespace Erethan.ScriptableSystems.Components
 {
     public class SceneLoadRequester : MonoBehaviour
     {
-        [SerializeField] private SceneLoadingSystem _loadSystem;
+        [SerializeField] private SceneLoadService _loadSystem;
         [SerializeField] private AssetReference _sceneToLoad;
 
 
