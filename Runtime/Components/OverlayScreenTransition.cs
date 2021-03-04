@@ -1,10 +1,9 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Erethan.SceneLoadingSystem.Components
+namespace Erethan.ScriptableSystems.SceneLoad.Components
 {
     public class OverlayScreenTransition : MonoBehaviour, IScreenTransition
     {

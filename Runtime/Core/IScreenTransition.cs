@@ -1,9 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-namespace Erethan.SceneLoadingSystem
+namespace Erethan.ScriptableSystems.SceneLoad
 {
     public interface IScreenTransition
     {
