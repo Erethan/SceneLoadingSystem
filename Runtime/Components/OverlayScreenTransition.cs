@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Erethan.ScriptableSystems.SceneLoad.Components
+namespace Erethan.ScreneTransition.Components
 {
     public class OverlayScreenTransition : MonoBehaviour, IScreenTransition
     {

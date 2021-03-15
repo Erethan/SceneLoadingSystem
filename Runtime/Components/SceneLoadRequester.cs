@@ -1,8 +1,8 @@
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using Erethan.ScriptableSystems.SceneLoad;
+using Erethan.ScriptableServices;
 
-namespace Erethan.ScriptableSystems.Components
+namespace Erethan.ScreneTransition.Components
 {
     public class SceneLoadRequester : MonoBehaviour
     {

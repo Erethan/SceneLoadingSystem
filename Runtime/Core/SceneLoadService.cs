@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-namespace Erethan.ScriptableSystems.SceneLoad
+using Erethan.ScriptableServices;
+
+namespace Erethan.ScreneTransition
 {
 
     [CreateAssetMenu(fileName = "Scene Loading Service", menuName = "Erethan/Scene Management/Scene Loading Service")]

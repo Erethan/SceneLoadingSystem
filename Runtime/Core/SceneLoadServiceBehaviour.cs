@@ -5,8 +5,9 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 
+using Erethan.ScriptableServices;
 
-namespace Erethan.ScriptableSystems.SceneLoad
+namespace Erethan.ScreneTransition
 {
     public class SceneLoadServiceBehaviour : ScriptableServiceBehaviour
     {
