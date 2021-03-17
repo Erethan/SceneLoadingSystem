@@ -1,6 +1,6 @@
 using System;
 
-namespace Erethan.ScriptableSystems.SceneLoad
+namespace Erethan.ScreneTransition
 {
     public interface IScreenTransition
     {

@@ -4,9 +4,9 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
+using Erethan.ScriptableServices;
 
-
-namespace Erethan.ScriptableSystems.SceneLoad
+namespace Erethan.ScreneTransition
 {
     public class SceneLoadServiceBehaviour : ScriptableServiceBehaviour
     {
@@ -23,7 +23,7 @@ namespace Erethan.ScriptableSystems.SceneLoad
                     return;
                 }
 
-                value.InstantiateAsync(transform).Completed += OnTransitionInstantiated;
+                value.InstantiateAsync(transform).Completed += OnTransitionInstantiated; //TODO: Move this to Initialize
             }
         }
 
